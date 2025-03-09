@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAP-SEARCH</title>
+    <style>
+      table {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <th><label for="area">검색 범위</label></th>
+          <td>
+            <select>
+              <option>제목</option>
+              <option>작성자</option>
+              <option>내용</option>
+            </select>
+          </td>
+          <th><label for="keyword">검색어</label></th>
+          <td>
+            <input
+              id="keyword"
+              type="text"
+              placeholder="검색어를 입력해주세요."
+              required
+            />
+            <input type="submit" value="검색" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

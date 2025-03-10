@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function findRandomPokemon() {
+        let pokemons = [
+          '피카츄',
+          '파이리',
+          '꼬부기',
+          '이상해씨',
+          '뮤츠',
+          '리자몽',
+        ];
+        let i = Math.floor(Math.random() * 6);
+        let pokemon = pokemons[i];
+        return `야생의 ${pokemon}가 나타났다!`;
+      }
+
+      console.log(findRandomPokemon());
+      console.log(findRandomPokemon());
+      console.log(findRandomPokemon());
+    </script>
+  </head>
+  <body></body>
+</html>

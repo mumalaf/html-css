@@ -11,21 +11,22 @@
         let button = document.getElementById('btn');
         // 이벤트를 연결합니다.
         button.onclick = function () {
-            var selectedFoods = [];
-        // 체크박스 요소들을 가져온다
-        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        // 체크된 체크박스의 값을 배열에 추가한다
-        for (var i = 0; i < checkboxes.length; i++) {
+          var selectedFoods = [];
+          // 체크박스 요소들을 가져온다
+          var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+          // 체크된 체크박스의 값을 배열에 추가한다
+          for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked) {
-            	selectedFruits.push(checkboxes[i].value);
+              selectedFoods.push(checkboxes[i].value);
             }
-        }
-        // 선택된 과일을 출력한다
-        if (selectedFruits.length > 0) {
-            alert("선택된 과일: " + selectedFruits.join(", "));
-        } else {
-            alert("과일을 선택해주세요.");
-        }
+          }
+          // 선택된 음식을 출력한다
+          if (selectedFoods.length > 0) {
+            console.log(selectedFoods.join(', '));
+          } else {
+            alert('음식을 선택해주세요.');
+          }
+        };
       };
     </script>
   </head>

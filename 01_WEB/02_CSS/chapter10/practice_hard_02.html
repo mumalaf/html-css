@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 문서 객체를 선택합니다.
+        let button = document.getElementById('btn');
+        // 이벤트를 연결합니다.
+        button.onclick = function () {
+            var selectedFoods = [];
+        // 체크박스 요소들을 가져온다
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        // 체크된 체크박스의 값을 배열에 추가한다
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+            	selectedFruits.push(checkboxes[i].value);
+            }
+        }
+        // 선택된 과일을 출력한다
+        if (selectedFruits.length > 0) {
+            alert("선택된 과일: " + selectedFruits.join(", "));
+        } else {
+            alert("과일을 선택해주세요.");
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <div>
+        좋아하는 음식은?
+        <label><input type="checkbox" name="food" value="라면" /> 라면</label>
+        <label><input type="checkbox" name="food" value="만두" /> 만두</label>
+        <label
+          ><input type="checkbox" name="food" value="불고기" /> 불고기</label
+        >
+        <input id="btn" type="button" value="전송" />
+      </div>
+    </form>
+  </body>
+</html>

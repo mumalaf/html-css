@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 문서 객체를 선택합니다.
+        let button = document.getElementById('btn');
+        // 이벤트를 연결합니다.
+        button.onclick = function () {
+          var iname = document.getElementById('name').value;
+          console.log(iname);
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="name">이름:</label>
+      <input id="name" name="name" type="text" size="30" />
+      <input id="btn" type="button" value="전송" />
+    </form>
+  </body>
+</html>
